@@ -51,7 +51,7 @@ jobs:
           labels: |
             org.opencontainers.image.version=${{ steps.webhook.outputs.version }}
 
-      - name: Log in to GitHub Container Registry
+      - name: Login to GHCR
         if: github.event_name != 'pull_request'
         uses: docker/login-action@v2
         with:
